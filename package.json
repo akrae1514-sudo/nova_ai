@@ -1,0 +1,35 @@
+{
+  "name": "nova-ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @nova-ai/web dev",
+    "build": "pnpm --filter @nova-ai/web build",
+    "lint": "pnpm --filter @nova-ai/web lint",
+    "typecheck": "pnpm --filter @nova-ai/web typecheck",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:staged": "pnpm --filter @nova-ai/web lint-staged",
+    "db:generate": "pnpm --filter @nova-ai/web db:generate",
+    "db:migrate": "pnpm --filter @nova-ai/web db:migrate",
+    "db:studio": "pnpm --filter @nova-ai/web db:studio",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "prisma",
+      "sharp",
+      "unrs-resolver",
+      "@tailwindcss/oxide"
+    ]
+  },
+  "packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6"
+}
